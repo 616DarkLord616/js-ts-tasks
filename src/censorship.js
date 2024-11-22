@@ -14,5 +14,9 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  const regex = new RegExp('\\b(' + forbidden.join('|') + ')\\b', 'gi');
+
+  return function censorString(str) {
+    return str.replace(regex, match => '*'.repeat(match.length));
+  };
 };
