@@ -23,5 +23,9 @@
  * @returns {function}
  */
 module.exports.payments = function payments(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return (income, debts) => {
+    const totalIncome = Object.values(income).reduce((acc, val) => acc + val, 0);
+    const totalDebts = Object.values(debts).reduce((acc, val) => acc + val, 0);
+    return totalIncome - totalDebts;
+  };
 };
