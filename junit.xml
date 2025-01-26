@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.023" tests="11" failures="3">
+  <testsuite name="Root Suite" timestamp="2025-01-21T08:45:14" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="all" timestamp="2025-01-21T08:45:14" tests="3" file="C:\Users\zurgh\lecture-git-test\js-ts-tasks\test\all.test.js" time="0.008" failures="0">
+    <testcase name="all should wait for all promises to resolve" time="0.004" classname="should wait for all promises to resolve">
+    </testcase>
+    <testcase name="all should resolve with an array that contains results of each promise" time="0.001" classname="should resolve with an array that contains results of each promise">
+    </testcase>
+    <testcase name="all should reject if any of the promises rejects" time="0.001" classname="should reject if any of the promises rejects">
+    </testcase>
+  </testsuite>
+  <testsuite name="debounce" timestamp="2025-01-21T08:45:14" tests="3" file="C:\Users\zurgh\lecture-git-test\js-ts-tasks\test\debounce.test.js" time="0.008" failures="2">
+    <testcase name="debounce should expect return type is a function" time="0.001" classname="should expect return type is a function">
+    </testcase>
+    <testcase name="debounce should invoke debounce once" time="0.001" classname="should invoke debounce once">
+      <failure message="expected { Spy }
+() =&gt; {} to have been called 1 times but got +0" type="AssertionError"><![CDATA[AssertionError: expected { Spy }
+() => {} to have been called 1 times but got +0
+    at Context.<anonymous> (test\debounce.test.js:35:45)
+    at process.processImmediate (node:internal/timers:483:21)
+
+      + expected - actual
+
+      -0
+      +1
+      ]]></failure>
+    </testcase>
+    <testcase name="debounce should invoke debounce twice" time="0.002" classname="should invoke debounce twice">
+      <failure message="expected { Spy }
+() =&gt; {} to have been called 1 times but got +0" type="AssertionError"><![CDATA[AssertionError: expected { Spy }
+() => {} to have been called 1 times but got +0
+    at Context.<anonymous> (test\debounce.test.js:51:45)
+    at process.processImmediate (node:internal/timers:483:21)
+
+      + expected - actual
+
+      -0
+      +1
+      ]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="mockApi" timestamp="2025-01-21T08:45:14" tests="2" file="C:\Users\zurgh\lecture-git-test\js-ts-tasks\test\mockApi.test.js" time="0.003" failures="1">
+    <testcase name="mockApi should resolve promise after 500ms with expected result" time="0.001" classname="should resolve promise after 500ms with expected result">
+      <failure message="expected false to be true" type="AssertionError"><![CDATA[AssertionError: expected false to be true
+    at Context.<anonymous> (test\mockApi.test.js:48:28)
+
+      + expected - actual
+
+      -false
+      +true
+      ]]></failure>
+    </testcase>
+    <testcase name="mockApi should handle promise rejection after 500ms" time="0.000" classname="should handle promise rejection after 500ms">
+    </testcase>
+  </testsuite>
+  <testsuite name="race" timestamp="2025-01-21T08:45:14" tests="3" file="C:\Users\zurgh\lecture-git-test\js-ts-tasks\test\race.test.js" time="0.003" failures="0">
+    <testcase name="race should resolve as soon as first promise resolved" time="0.000" classname="should resolve as soon as first promise resolved">
+    </testcase>
+    <testcase name="race should resolve with the value of the first resolved promise" time="0.001" classname="should resolve with the value of the first resolved promise">
+    </testcase>
+    <testcase name="race should reject if any of the promises rejects" time="0.000" classname="should reject if any of the promises rejects">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,6 +1,3 @@
-// Credits: iphone by Adiel Hercules
-// https://codepen.io/adielhercules/pen/dJJGBQ
-
 customElements.define(
   "iphone-frame",
   class extends HTMLElement {
@@ -33,7 +30,7 @@ customElements.define(
         margin: 40px auto;
         width: 360px;
         height: 780px;
-        background-color: #000000;
+        background-color:rgb(0, 0, 0);
         // background-color: #7371ee;
         // background-image: linear-gradient(60deg, #7371ee 1%, #a1d9d6 100%);
         border-radius: 40px;
