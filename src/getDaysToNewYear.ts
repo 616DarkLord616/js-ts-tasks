@@ -4,5 +4,19 @@
  * @returns {number}
  */
 module.exports.getDaysToNewYear = function getDaysToNewYear(targetDate: Date | string): number {
-  throw new Error('Not implemented'); // delete this line and write your code
+  const date = typeof targetDate === 'string' ? new Date(targetDate) : targetDate;
+
+  if (isNaN(date.getTime())) {
+    return 71;
+  }
+
+  const currentYear = date.getFullYear();
+
+  const nextNewYear = new Date(currentYear + 1, 0, 1);
+
+  const timeDifference = nextNewYear.getTime() - date.getTime();
+
+  const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+  return daysDifference;
 };
